@@ -17,6 +17,9 @@ public class PlayerListener implements Listener {
         Component JoinMSG = MiniMessage.miniMessage().deserialize("<#AAFFAA>" + p + " <#55ff00>has joined the game!");
 
         event.joinMessage(JoinMSG);
+        Component DataF = MiniMessage.miniMessage().deserialize("<#55ff00>Data Folder:" + DeekaSurvival.getInstance().getDataFolder());
+        player.sendMessage(DataF);
+
     }
 
     @EventHandler

@@ -8,3 +8,5 @@ commands:
   gamemode:
     description: 'idk gamemode'
     aliases: gm
+  sethome:
+    description: 'idk sethome'

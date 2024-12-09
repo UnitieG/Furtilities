@@ -1,3 +1,4 @@
 me\deeka\deekaSurvival\PlayerListener.class
 me\deeka\deekaSurvival\AdminCommands\GamemodeCommand.class
 me\deeka\deekaSurvival\DeekaSurvival.class
+me\deeka\deekaSurvival\Commands\SethomeCommand.class

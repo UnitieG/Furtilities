@@ -3,6 +3,7 @@ package me.deeka.deekaSurvival.AdminCommands;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -54,6 +55,8 @@ public class GamemodeCommand implements CommandExecutor {
             } else {
                 p.sendMessage(InvalidArgument);
             }
+        } else {
+            sender.sendMessage(ChatColor.RED + "This command only works with player.");
         }
         return true;
     }
