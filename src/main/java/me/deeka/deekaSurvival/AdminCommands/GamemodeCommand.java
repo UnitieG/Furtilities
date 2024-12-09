@@ -26,7 +26,7 @@ public class GamemodeCommand implements CommandExecutor {
                         if (p.hasPermission("deekasurvival.gamemode.others")) {
                             Player t = Bukkit.getPlayer(args[1]);
                             Component ChangedDoneT = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset><#AAFFAA>Gamemode of <#55ff00>" + t.getName() + " <#AAFFAA>has been updated to <#55ff00>" + t.getGameMode());
-                            Component ChangedFailed = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset>" + t + "<#FF0000>is not a valid player.");
+                            Component ChangedFailed = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset>" + args[1] + "<#FF0000>is not a valid player.");
                             if (t != null) {
                                 if (gameMode != null) {
                                     t.setGameMode(gameMode);
