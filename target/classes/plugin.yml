@@ -1,0 +1,10 @@
+name: DeekaSurvival
+version: '1.0-SNAPSHOT'
+main: me.deeka.deekaSurvival.DeekaSurvival
+api-version: '1.21'
+authors: [ furrygang ]
+description: idk smp plugin
+commands:
+  gamemode:
+    permission: 'deekasurvival.gamemode.creative'
+    description: 'idk gamemode'
