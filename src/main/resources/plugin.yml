@@ -6,5 +6,5 @@ authors: [ furrygang ]
 description: idk smp plugin
 commands:
   gamemode:
-    permission: 'deekasurvival.gamemode.creative'
     description: 'idk gamemode'
+    aliases: gm

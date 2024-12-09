@@ -24,13 +24,12 @@ public class GamemodeCommand implements CommandExecutor {
                     GameMode gameMode = getGameModeFromString(gamemodeInput);
                     if (args.length > 1) {
                         if (p.hasPermission("deekasurvival.gamemode.others")) {
-                            Player t = Bukkit.getPlayer(args[1]);
-                            Component ChangedDoneT = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset><#AAFFAA>Gamemode of <#55ff00>" + t.getName() + " <#AAFFAA>has been updated to <#55ff00>" + t.getGameMode());
-                            Component ChangedFailed = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset>" + args[1] + "<#FF0000>is not a valid player.");
-                            if (t != null) {
+                            Component ChangedFailed = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset><#ff4e3b>" + args[1] + " <#FF0000>is not a valid player.");
+                            if (Bukkit.getPlayer(args[1]) != null) {
                                 if (gameMode != null) {
-                                    t.setGameMode(gameMode);
-                                    t.sendMessage(ChangedDone);
+                                    Bukkit.getPlayer(args[1]).setGameMode(gameMode);
+                                    Component ChangedDoneT = MiniMessage.miniMessage().deserialize("<#55ff00><b>Staff Utils <reset><gray><b>| <reset><#AAFFAA>Gamemode of <#55ff00>" + Bukkit.getPlayer(args[1]).getName() + " <#AAFFAA>has been updated to <#55ff00>" + Bukkit.getPlayer(args[1]).getGameMode());
+                                    Bukkit.getPlayer(args[1]).sendMessage(ChangedDone);
                                     p.sendMessage(ChangedDoneT);
                                 } else {
                                     p.sendMessage(InvalidGamemode);
@@ -38,6 +37,8 @@ public class GamemodeCommand implements CommandExecutor {
                             } else {
                                 p.sendMessage(ChangedFailed);
                             }
+                        } else {
+                            p.sendMessage(NoPermission);
                         }
                     } else {
                         if (gameMode != null) {
